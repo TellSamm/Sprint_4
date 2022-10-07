@@ -3,29 +3,35 @@ package pageobject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import settings.BaseSeleniumPage;
+import settings.BasePage;
 
-public class FrequentlyAskedQuestions extends BaseSeleniumPage{
+
+  public class MainPage extends BasePage {
+
+    //кнопка "Заказать"
+    private By orderButton = By.xpath("//button[@class='Button_Button__ra12g']");
+    //нижняя кнопка "Заказать"
+    private By downOrderButton = By.xpath("//button[@class = 'Button_Button__ra12g Button_Middle__1CSJM']");
     //кнопка для куков "да все привыкли"
     private By buttonAcceptCookies = By.xpath("//button[text() = 'да все привыкли']");
     //элемент web-страницы со списком вопросов
     private By elementWithQuestions = By.xpath("//div[@class = 'accordion']");
     //первый вопрос
-    private By oneQuestion = By.xpath("//div[@id= 'accordion__heading-0']");
+    private By questionThePrice = By.xpath("//div[@id= 'accordion__heading-0']");
     //второй вопрос
-    private By twoQuestion = By.xpath("//div[@id= 'accordion__heading-1']");
+    private By questionSeveralScooters = By.xpath("//div[@id= 'accordion__heading-1']");
     //третий вопрос
-    private By threeQuestion = By.xpath("//div[@id= 'accordion__heading-2']");
+    private By questionRentalTime = By.xpath("//div[@id= 'accordion__heading-2']");
     //четвертый вопрос
-    private By fourQuestion = By.xpath("//div[@id= 'accordion__heading-3']");
+    private By questionOrderToday = By.xpath("//div[@id= 'accordion__heading-3']");
     //пятый вопрос
-    private By fiveQuestion = By.xpath("//div[@id= 'accordion__heading-4']");
+    private By questionReturnScooter = By.xpath("//div[@id= 'accordion__heading-4']");
     //шестой вопрос
-    private By sixQuestion = By.xpath("//div[@id= 'accordion__heading-5']");
+    private By questionScooterCharging = By.xpath("//div[@id= 'accordion__heading-5']");
     //седьмой вопрос
-    private By sevenQuestion = By.xpath("//div[@id= 'accordion__heading-6']");
+    private By questionCancelOrder = By.xpath("//div[@id= 'accordion__heading-6']");
     //восьмой вопрос
-    private By eightQuestion = By.xpath("//div[@id= 'accordion__heading-7']");
+    private By questionLifeMoscowRingRoad = By.xpath("//div[@id= 'accordion__heading-7']");
     //текст первого вопрос
     private By textOneQuestion = By.xpath("//div[@id= 'accordion__panel-0']");
     //текст второго вопроса
@@ -48,57 +54,69 @@ public class FrequentlyAskedQuestions extends BaseSeleniumPage{
 
     //методы для работы с объектами страницы
 
+
+      //методы для работы с объектами страницы
+      public void clickButtonOrder () {
+          driver.findElement(orderButton).click();
+      }
+
+      public void clickDownButtonOrder(){
+          WebElement element = driver.findElement(downOrderButton);
+          ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
+          driver.findElement(downOrderButton).click();
+      }
+
     public void acceptCookies(){
         driver.findElement(buttonAcceptCookies).click();
     }
     public void clickOnTopicQuestionOne(){
         WebElement element = driver.findElement(elementWithQuestions);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        driver.findElement(oneQuestion).click();
+        driver.findElement(questionThePrice).click();
 
     }
     public void clickOnTopicQuestionTwo(){
         WebElement element = driver.findElement(elementWithQuestions);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        driver.findElement(twoQuestion).click();
+        driver.findElement(questionSeveralScooters).click();
 
     }
 
     public void clickOnTopicQuestionThree(){
         WebElement element = driver.findElement(elementWithQuestions);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        driver.findElement(threeQuestion).click();
+        driver.findElement(questionRentalTime).click();
 
     }
 
     public void clickOnTopicQuestionFour(){
         WebElement element = driver.findElement(elementWithQuestions);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        driver.findElement(fourQuestion).click();
+        driver.findElement(questionOrderToday).click();
 
     }
 
     public void clickOnTopicQuestionFive(){
         WebElement element = driver.findElement(elementWithQuestions);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        driver.findElement(fiveQuestion).click();
+        driver.findElement(questionReturnScooter).click();
     }
 
     public void clickOnTopicQuestionSix(){
         WebElement element = driver.findElement(elementWithQuestions);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        driver.findElement(sixQuestion).click();
+        driver.findElement(questionScooterCharging).click();
     }
 
     public void clickOnTopicQuestionSeven(){
         WebElement element = driver.findElement(elementWithQuestions);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        driver.findElement(sevenQuestion).click();
+        driver.findElement(questionCancelOrder).click();
     }
     public void clickOnTopicQuestionEight(){
         WebElement element = driver.findElement(elementWithQuestions);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        driver.findElement(eightQuestion).click();
+        driver.findElement(questionLifeMoscowRingRoad).click();
     }
 
     public String getQuestionTextOne(){

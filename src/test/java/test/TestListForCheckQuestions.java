@@ -2,8 +2,8 @@ package test;
 
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
-import pageobject.FrequentlyAskedQuestions;
-import settings.BaseSelenium;
+import pageobject.BaseSelenium;
+import pageobject.MainPage;
 
 import static org.hamcrest.CoreMatchers.containsString;
 
@@ -11,7 +11,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 public class TestListForCheckQuestions extends BaseSelenium {
     @Test
     public void shouldOpenAndCheckTextForOneQuestion() {
-        FrequentlyAskedQuestions objectAskedQuestions = new FrequentlyAskedQuestions();
+        MainPage objectAskedQuestions = new MainPage();
         objectAskedQuestions.acceptCookies();
         objectAskedQuestions.clickOnTopicQuestionOne();
         String expected = "Сутки — 400 рублей. Оплата курьеру — наличными или картой.";
@@ -21,7 +21,7 @@ public class TestListForCheckQuestions extends BaseSelenium {
 
     @Test
     public void shouldOpenAndCheckTextForTwoQuestion() {
-        FrequentlyAskedQuestions objectAskedQuestions = new FrequentlyAskedQuestions();
+        MainPage objectAskedQuestions = new MainPage();
         objectAskedQuestions.acceptCookies();
         objectAskedQuestions.clickOnTopicQuestionTwo();
         String expected = "Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.";
@@ -31,7 +31,7 @@ public class TestListForCheckQuestions extends BaseSelenium {
 
     @Test
     public void shouldOpenAndCheckTextForThreeQuestion() {
-        FrequentlyAskedQuestions objectAskedQuestions = new FrequentlyAskedQuestions();
+        MainPage objectAskedQuestions = new MainPage();
         objectAskedQuestions.acceptCookies();
         objectAskedQuestions.clickOnTopicQuestionThree();
         String expected = "Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.";
@@ -41,7 +41,7 @@ public class TestListForCheckQuestions extends BaseSelenium {
 
     @Test
     public void shouldOpenAndCheckTextForFourQuestion() {
-        FrequentlyAskedQuestions objectAskedQuestions = new FrequentlyAskedQuestions();
+        MainPage objectAskedQuestions = new MainPage();
         objectAskedQuestions.acceptCookies();
         objectAskedQuestions.clickOnTopicQuestionFour();
         String expected = "Только начиная с завтрашнего дня. Но скоро станем расторопнее.";
@@ -51,7 +51,7 @@ public class TestListForCheckQuestions extends BaseSelenium {
 
     @Test
     public void shouldOpenAndCheckTextForFiveQuestion() {
-        FrequentlyAskedQuestions objectAskedQuestions = new FrequentlyAskedQuestions();
+        MainPage objectAskedQuestions = new MainPage();
         objectAskedQuestions.acceptCookies();
         objectAskedQuestions.clickOnTopicQuestionFive();
         String expected = "Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.";
@@ -61,7 +61,7 @@ public class TestListForCheckQuestions extends BaseSelenium {
 
     @Test
     public void shouldOpenAndCheckTextForSixQuestion() {
-        FrequentlyAskedQuestions objectAskedQuestions = new FrequentlyAskedQuestions();
+        MainPage objectAskedQuestions = new MainPage();
         objectAskedQuestions.acceptCookies();
         objectAskedQuestions.clickOnTopicQuestionSix();
         String expected = "Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.";
@@ -71,7 +71,7 @@ public class TestListForCheckQuestions extends BaseSelenium {
 
     @Test
     public void shouldOpenAndCheckTextForSevenQuestion() {
-        FrequentlyAskedQuestions objectAskedQuestions = new FrequentlyAskedQuestions();
+        MainPage objectAskedQuestions = new MainPage();
         objectAskedQuestions.acceptCookies();
         objectAskedQuestions.clickOnTopicQuestionSeven();
         String expected = "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.";
@@ -81,7 +81,7 @@ public class TestListForCheckQuestions extends BaseSelenium {
 
     @Test
     public void shouldOpenAndCheckTextForEightQuestion() {
-        FrequentlyAskedQuestions objectAskedQuestions = new FrequentlyAskedQuestions();
+        MainPage objectAskedQuestions = new MainPage();
         objectAskedQuestions.acceptCookies();
         objectAskedQuestions.clickOnTopicQuestionEight();
         String expected = "Да, обязательно. Всем самокатов! И Москве, и Московской области.";

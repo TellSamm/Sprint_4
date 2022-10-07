@@ -4,14 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import settings.BaseSeleniumPage;
+import settings.BasePage;
 
-public class OrderPage extends BaseSeleniumPage {
+public class OrderPage extends BasePage {
 
-    //кнопка "Заказать"
-    private By orderButton = By.xpath("//button[@class='Button_Button__ra12g']");
-    //нижняя кнопка "Заказать"
-    private By downOrderButton = By.xpath("//button[@class = 'Button_Button__ra12g Button_Middle__1CSJM']");
+
     //поле для ввода имени
     private By fieldName = By.xpath("//input[@placeholder= '* Имя']");
     //поле для ввода фамилии
@@ -22,10 +19,10 @@ public class OrderPage extends BaseSeleniumPage {
     private By fieldStationMetro = By.xpath("//input[@class= 'select-search__input']");
 
     //станция метро 1
-    private By stationMetroOne = By.xpath("//div[text() ='Бульвар Рокоссовского']");
+    private By stationMetroRocossovskogo = By.xpath("//div[text() ='Бульвар Рокоссовского']");
 
     //станция метро 2
-    private By stationMetroTwo = By.xpath("//div[text() ='Черкизовская']");
+    private By stationMetroCherkizovskaya = By.xpath("//div[text() ='Черкизовская']");
     //поле для ввода номера телефона
     private By fieldNumberPhone = By.xpath("//input[@placeholder= '* Телефон: на него позвонит курьер']");
     //конпа "Далее"
@@ -42,25 +39,16 @@ public class OrderPage extends BaseSeleniumPage {
     //поле для написания комментария
     private By fieldCommentForDelivery = By.xpath("//input[@placeholder='Комментарий для курьера']");
     //кнопка "Заказать"
-    private By buttonCreateOrder = By.xpath("//button[text()='Заказать' and @class='Button_Button__ra12g Button_Middle__1CSJM']");
+    private By buttonCreateOrder = By.xpath("//button[text()='Заказать']/parent::div[@class='Order_Buttons__1xGrp']");
 
     //кнопка "Да", подтверждение закаказа
     private By yesOrder = By.xpath("//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
 
-    //текст в сформированном заказе
+    //текст о сформированном заказе
     private By textByOrder = By.xpath("//div[@class = 'Order_ModalHeader__3FDaJ']");
 
 
-    //методы для работы с объектами страницы
-    public void clickButtonOrder () {
-        driver.findElement(orderButton).click();
-    }
 
-    public void clickDownButtonOrder(){
-        WebElement element = driver.findElement(downOrderButton);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        driver.findElement(downOrderButton).click();
-    }
 
     public void setFieldName(String name) {
         driver.findElement(fieldName).sendKeys(name);
@@ -79,11 +67,11 @@ public class OrderPage extends BaseSeleniumPage {
     }
 
     public void setStationMetro(){
-        driver.findElement(stationMetroOne).click();
+        driver.findElement(stationMetroRocossovskogo).click();
     }
 
     public void setStationMetroTwo(){
-        driver.findElement(stationMetroTwo).click();
+        driver.findElement(stationMetroCherkizovskaya).click();
     }
 
     public void setNumberPhone(String number){

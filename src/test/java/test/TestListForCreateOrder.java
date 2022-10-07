@@ -2,8 +2,9 @@ package test;
 
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
+import pageobject.MainPage;
 import pageobject.OrderPage;
-import settings.BaseSelenium;
+import pageobject.BaseSelenium;
 import test.test_data.Order;
 import test.test_data.User;
 
@@ -17,14 +18,15 @@ public class TestListForCreateOrder extends BaseSelenium {
         OrderPage objectOrderPage = new OrderPage();
         User userForOrder = new User();
         Order dateForOrder = new Order();
+        MainPage odjectMainPage = new MainPage();
 
-        objectOrderPage.clickButtonOrder();
-        objectOrderPage.setFieldName(userForOrder.setNameUser("Иван"));
-        objectOrderPage.setFieldLasteName(userForOrder.setLastName("Гудим"));
-        objectOrderPage.setAdress(dateForOrder.setAddress("Проспект мира 66"));
+        odjectMainPage.clickButtonOrder();
+        objectOrderPage.setFieldName(userForOrder.setNameUser("Семен"));
+        objectOrderPage.setFieldLasteName(userForOrder.setLastName("Черников"));
+        objectOrderPage.setAdress(dateForOrder.setAddress("Эльменя 23"));
         objectOrderPage.clicktStationMetro();
         objectOrderPage.setStationMetro();
-        objectOrderPage.setNumberPhone(dateForOrder.setNumberPhone("89236823155"));
+        objectOrderPage.setNumberPhone(dateForOrder.setNumberPhone("89196742969"));
         objectOrderPage.clickButtonNext();
         objectOrderPage.setWhereSendSamokat(dateForOrder.setDeliveryDate("10.09.2022"));
         objectOrderPage.clickTimeRent();
@@ -43,14 +45,15 @@ public class TestListForCreateOrder extends BaseSelenium {
         OrderPage objectOrderPage = new OrderPage();
         User userForOrder = new User();
         Order dateForOrder = new Order();
+        MainPage odjectMainPage = new MainPage();
 
-        objectOrderPage.clickButtonOrder();
-        objectOrderPage.setFieldName(userForOrder.setNameUser("Алексей"));
-        objectOrderPage.setFieldLasteName(userForOrder.setLastName("Горичев"));
-        objectOrderPage.setAdress(dateForOrder.setAddress("Ленина 88"));
+        odjectMainPage.clickButtonOrder();
+        objectOrderPage.setFieldName(userForOrder.setNameUser("Петр"));
+        objectOrderPage.setFieldLasteName(userForOrder.setLastName("Иванович"));
+        objectOrderPage.setAdress(dateForOrder.setAddress("Ленина 48"));
         objectOrderPage.clicktStationMetro();
         objectOrderPage.setStationMetroTwo();
-        objectOrderPage.setNumberPhone(dateForOrder.setNumberPhone("89236753457"));
+        objectOrderPage.setNumberPhone(dateForOrder.setNumberPhone("89236743457"));
         objectOrderPage.clickButtonNext();
         objectOrderPage.setWhereSendSamokat(dateForOrder.setDeliveryDate("11.01.2022"));
         objectOrderPage.clickTimeRent();
@@ -69,11 +72,12 @@ public class TestListForCreateOrder extends BaseSelenium {
         OrderPage objectOrderPage = new OrderPage();
         User userForOrder = new User();
         Order dateForOrder = new Order();
+        MainPage odjectMainPage = new MainPage();
 
-        objectOrderPage.clickDownButtonOrder();
-        objectOrderPage.setFieldName(userForOrder.setNameUser("Сильвестр"));
-        objectOrderPage.setFieldLasteName(userForOrder.setLastName("Акапьян"));
-        objectOrderPage.setAdress(dateForOrder.setAddress("Карла Маркса 13 корпус 3"));
+        odjectMainPage.clickButtonOrder();
+        objectOrderPage.setFieldName(userForOrder.setNameUser("Петр"));
+        objectOrderPage.setFieldLasteName(userForOrder.setLastName("Корнилов"));
+        objectOrderPage.setAdress(dateForOrder.setAddress("Карла Маркса 14 корпус 3"));
         objectOrderPage.clicktStationMetro();
         objectOrderPage.setStationMetroTwo();
         objectOrderPage.setNumberPhone(dateForOrder.setNumberPhone("89137754457"));
@@ -97,11 +101,12 @@ public class TestListForCreateOrder extends BaseSelenium {
         OrderPage objectOrderPage = new OrderPage();
         User userForOrder = new User();
         Order dateForOrder = new Order();
+        MainPage odjectMainPage = new MainPage();
 
-        objectOrderPage.clickDownButtonOrder();
-        objectOrderPage.setFieldName(userForOrder.setNameUser("Наталья"));
-        objectOrderPage.setFieldLasteName(userForOrder.setLastName("Мартынова"));
-        objectOrderPage.setAdress(dateForOrder.setAddress("Ленина 88"));
+        odjectMainPage.clickButtonOrder();
+        objectOrderPage.setFieldName(userForOrder.setNameUser("Анастасия"));
+        objectOrderPage.setFieldLasteName(userForOrder.setLastName("Михайлова"));
+        objectOrderPage.setAdress(dateForOrder.setAddress("Петрова 84"));
         objectOrderPage.clicktStationMetro();
         objectOrderPage.setStationMetroTwo();
         objectOrderPage.setNumberPhone(dateForOrder.setNumberPhone("89137654386"));

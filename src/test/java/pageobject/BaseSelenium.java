@@ -17,10 +17,10 @@ public class BaseSelenium {
 
     @BeforeClass
     public static void setUp() {
-        //WebDriverManager.firefoxdriver().setup();
-        //driver = new FirefoxDriver();
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
+        //WebDriverManager.chromedriver().setup();
+        //driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

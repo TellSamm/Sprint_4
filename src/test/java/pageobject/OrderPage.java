@@ -39,10 +39,10 @@ public class OrderPage extends BasePage {
     //поле для написания комментария
     private By fieldCommentForDelivery = By.xpath("//input[@placeholder='Комментарий для курьера']");
     //кнопка "Заказать"
-    private By buttonCreateOrder = By.xpath("//button[text()='Заказать']/parent::div[@class='Order_Buttons__1xGrp']");
+    private By buttonCreateOrder = By.xpath("//button[text()='Заказать' and @class='Button_Button__ra12g Button_Middle__1CSJM']");
 
     //кнопка "Да", подтверждение закаказа
-    private By yesOrder = By.xpath("//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
+    private By yesOrder = By.xpath("//button[text()='Да']");
 
     //текст о сформированном заказе
     private By textByOrder = By.xpath("//div[@class = 'Order_ModalHeader__3FDaJ']");
